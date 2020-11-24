@@ -1,0 +1,31 @@
+<div class="panel panel-primary">
+    <button type="button" class="btn btn-primary float-right">
+        Download
+    </button>
+    <button type="button" class="btn btn-primary float-right" style="margin-right: 30px">
+        Add User
+    </button>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Email</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users | async">
+            <td>{{user.name}}</td>
+            <td>{{user.gender}}</td>
+            <td>{{user.email}}</td>
+            <td><li  (click)="deleteEmployee(employee.id)"class="nav-item" >Delete</li>
+                <li (click)="updateEmployee(employee.id)" class="nav-item" style="margin-left: 10px">edit</li>
+                
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

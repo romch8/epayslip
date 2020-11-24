@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-sm bg-light ">
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <div class="topnav">
+        <a routerLink="users" class="nav-link" routerLinkActive="active">Index</a>
+        <a routerLink="users" class="nav-link" routerLinkActive="active" ><i class='fas fa-home fa-3x'></i>Normal<br/>Contacts</a>
+        <a routerLink="users" class="nav-link" routerLinkActive="active">Ant Design</a>
+      </div>
+    </li>
+    
+  </ul>
+</nav>
+
+
+<div class="container">
+  <br>
+  <h2 style="text-align: center;">{{title}}</h2>
+  <hr>  
+  <div class="card">
+    <div class="card-body">
+  <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+

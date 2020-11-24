@@ -1,0 +1,30 @@
+<div style="background: #ECECEC; padding: 30px;">
+  <nz-row [nzGutter]="16">
+    <nz-col [nzLg]="12" [nzSm]="24">
+      <nz-card>
+        <nz-statistic [nzValue]="fileList.length | number" [nzTitle]="'Total Files'" [nzPrefix]="prefixTplOne"
+          [nzValueStyle]="{ color: '#3F8600' }">
+        </nz-statistic>
+        <ng-template #prefixTplOne><i nz-icon type="video-camera"></i></ng-template>
+      </nz-card>
+    </nz-col>
+    <nz-col [nzLg]="12" [nzSm]="24">
+      <nz-card>
+        <nz-statistic [nzValue]="lastModifiedStr" [nzTitle]="'Last Modified'" [nzPrefix]="prefixTplTwo"
+          [nzValueStyle]="{ color: '#CF1322' }">
+        </nz-statistic>
+        <ng-template #prefixTplTwo><i nz-icon type="cloud-sync"></i></ng-template>
+      </nz-card>
+    </nz-col>
+  </nz-row>
+</div>
+<div class="movieContainer">
+  <div *ngFor="let data of fileList">
+    <div nz-row>
+      <div nz-col [nzLg]="12" [nzMd]="24" [nzSm]="24">{{ data.fileName }}</div>
+      <div nz-col [nzLg]="6" [nzMd]="12" [nzSm]="24">{{ data.fileType }} | {{ data.displaySize }}</div>
+      <div nz-col [nzLg]="6" [nzMd]="12" [nzSm]="24">{{ data.lastModifiedStr }}</div>
+    </div>
+    <nz-divider></nz-divider>
+  </div>
+</div>

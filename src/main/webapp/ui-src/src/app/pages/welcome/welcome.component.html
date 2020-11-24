@@ -1,0 +1,24 @@
+<nz-layout>
+  <nz-header>
+    <ul nz-menu nzMode="horizontal">
+      <li nz-menu-item nzSelected [routerLink]="['/welcome/files']">
+        <i nz-icon nzType="home"></i>
+        Index
+      </li>
+      <li nz-menu-item [routerLink]="['/welcome/contacts']">
+        <i nz-icon nzType="contacts"></i>
+        Contacts
+      </li>
+      <li nz-menu-item>
+        <a href="https://ng.ant.design/version/7.5.x/docs/introduce/en" target="_blank" rel="noopener noreferrer"><i nz-icon nzType="ant-design"
+            nzTheme="outline"></i>Ant Design</a>
+      </li>
+    </ul>
+  </nz-header>
+  <nz-content>
+    <div class="inner-content">
+      <router-outlet></router-outlet>
+    </div>
+  </nz-content>
+  <nz-footer>©2020 Powered by Edwin</nz-footer>
+</nz-layout>

@@ -1,0 +1,1 @@
+export const LS_MOVIE = 'LS_MOVIE';
